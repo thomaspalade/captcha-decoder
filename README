@@ -1,4 +1,4 @@
-**SHORT DESCRIPTION**
+<b>HORT DESCRIPTION</b>
 The program receives a bitmap image file (bmp) as input and extracts valuable information out of it.
 It solves captcha type questions, identifying the digits from an image.
 Also, the program can perform operations on the original file such as changing the digits' color and even creating
