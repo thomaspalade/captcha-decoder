@@ -1,16 +1,16 @@
-# SHORT DESCRIPTION
+#  SHORT DESCRIPTION
 The program receives a bitmap image file (bmp) as input and extracts valuable information out of it.
 It solves captcha type questions, identifying the digits from an image.
 Also, the program can perform operations on the original file such as changing the digits' color and even creating
 a whole new bmp file where certain digits are removed from the original image.
 
-IMPORTANT STRUCTURES USED
+#  IMPORTANT STRUCTURES USED
 - bmp_fileheader and bmp_infoheader -> used for working with photos with .bmp extension
 - culoare (a struct type defined for saving the colors in R, G, B type format)
 - matrice (same as above, only with one extra field, used for saving a char)
 - pozitii (same as above, only with some extra fields, used for saving positions)
 
-IMPORTANT FUNCTIONS
+#  IMPORTANT FUNCTIONS
 - Bine(...)  -> this function verifies if an element from a two-dimensional array equals 'x' (which stands for a code)
 - Mbine(...) -> this function assigns the value 'x' at a certain position (i, j) in a two-dimensional array.
 - Zero(...), Unu(...), Doi(...) .... -> verifies if at a certain positions (i, j) from the two-dimensional array starts the photo
@@ -35,6 +35,6 @@ poz[] -> array of type "pozitii" which stores data about the digits found in the
 in the matrix configuration (i, j)
 cool -> a structure which stores the color's code (R, G, B) for task 2
 
-The Concept -> Explained:
+#  THE MAIN LOGIC -> Explained:
 The main function contains all the important variables. It calls, in chronological order, the functions which resolve all the tasks.
 The code speaks for itself and the functions and variables explained above are logical enough to be understood.
