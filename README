@@ -1,0 +1,40 @@
+SHORT DESCRIPTION
+The program receives a bitmap image file (bmp) as input and extracts valuable information out of it.
+It solves captcha type questions, identifying the digits from an image.
+Also, the program can perform operations on the original file such as changing the digits' color and even creating
+a whole new bmp file where certain digits are removed from the original image.
+
+IMPORTANT STRUCTURES USED
+- bmp_fileheader and bmp_infoheader -> used for working with photos with .bmp extension
+- culoare (a struct type defined for saving the colors in R, G, B type format)
+- matrice (same as above, only with one extra field, used for saving a char)
+- pozitii (same as above, only with some extra fields, used for saving positions)
+
+IMPORTANT FUNCTIONS
+- Bine(...)  -> this function verifies if an element from a two-dimensional array equals 'x' (which stands for a code)
+- Mbine(...) -> this function assigns the value 'x' at a certain position (i, j) in a two-dimensional array.
+- Zero(...), Unu(...), Doi(...) .... -> verifies if at a certain positions (i, j) from the two-dimensional array starts the photo
+code for a digit (0/1/....9)
+- Pune_0(...), Pune_1(...), Pune_2(...) ... -> this function fills the two-dimensional array with values
+- Rezolva(...) -> This function goes through every element of the two-dimensional array and looks up
+for possible configurations of digits. The function also uses some extra data.
+- Pune(...)    -> verifies what digit has to be coded and calls the coresponding function
+- Citire(...)  -> reads from the text file ("input.txt"), creates the necessary strings for output and also
+gets the R, G, B values necessary for the program to work
+- int main () -> the main function that contains all the task and that calls all the important functions
+
+mat[][] -> the matrix of dimensions [height] and [3 * width] which contains the photo, but coded
+MAT[][] -> the matrix (type matrice). the dimensions are [height] and [width]. this matrix contains fields for colors, too
+a[] -> the array where the initial info (the actual .bmp photo) is read
+b[] -> the array where the info necessary for task 3 is storedc
+f[] -> frequancy array, which stores data about what digit should be elimenated or not
+height, width -> the dimensions of the matrix, aslo Width = 3 * width
+
+t[] -> array which stores all the digits found and from which the useless digits are eliminated at some point, if necessary
+poz[] -> array of type "pozitii" which stores data about the digits found in the original photo and about their positions
+in the matrix configuration (i, j)
+cool -> a structure which stores the color's code (R, G, B) for task 2
+
+The Concept -> Explained:
+The main function contains all the important variables. It calls, in chronological order, the functions which resolve all the tasks.
+The code speaks for itself and the functions and variables explained above are logical enough to be understood.
